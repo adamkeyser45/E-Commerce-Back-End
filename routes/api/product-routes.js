@@ -9,12 +9,10 @@ router.get('/', (req, res) => {
   Product.findAll({
     include: [
       {
-        model: Category,
-        attributes: []
+        model: Category
       },
       {
-        model: Tag,
-        attributes: []
+        model: Tag
       }
     ]
   })
@@ -34,12 +32,10 @@ router.get('/:id', (req, res) => {
     },
     include: [
       {
-        model: Category,
-        attributes: ['id', 'category_name']
+        model: Category
       },
       {
-        model: Tag,
-        attributes: ['id', 'tag_name']
+        model: Tag
       }
     ]
   })
